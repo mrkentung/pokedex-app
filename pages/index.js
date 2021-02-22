@@ -1,8 +1,9 @@
-import Head from 'next/head';
-import React, { Fragment } from 'react';
-import useSWR, { useSWRPages } from 'swr';
-import fetcher from './../lib/fetcher';
-import PokemonShort from './../components/pokemonShort';
+import React from 'react'
+import useSWR, { useSWRPages } from 'swr'
+
+import fetcher from './../lib/fetcher'
+import PokemonShort from './../components/pokemonShort'
+import MainLayout from './../layouts/main'
 
 export default function Home() {
   const { pages, isLoadingMore, loadMore, isReachingEnd } = useSWRPages(
@@ -42,11 +43,7 @@ export default function Home() {
   }, [infiniteScrollEnabled]);
 
   return (
-    <Fragment>
-      <Head>
-        <title>Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+    <MainLayout>
       <section className="container mx-auto">
         <div className="-mx-2 flex flex-wrap">{pages}</div>
         <div className="mx-auto mt-10 mb-20 w-1/3">
@@ -62,6 +59,6 @@ export default function Home() {
           </button>
         </div>
       </section>
-    </Fragment>
+    </MainLayout>
   );
 }
