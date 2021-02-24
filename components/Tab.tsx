@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Tab = ({ children, handleSelect, isSelected }) => {
+type Props = {
+  children: React.ReactNode;
+  handleSelect: () => void;
+  isSelected: boolean;
+};
+
+const Tab = ({ children, handleSelect, isSelected }: Props) => {
   return (
     <button
       className={

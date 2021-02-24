@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['simple-import-sort'],
+  plugins: ['simple-import-sort', '@typescript-eslint', 'prettier'],
   root: true, // Make sure eslint picks up the config at the root of the directory
   parserOptions: {
     ecmaVersion: 2020, // Use the latest ecmascript standard
@@ -9,6 +9,15 @@ module.exports = {
     },
   },
   settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
     react: {
       version: 'detect', // Automatically detect the react version
     },
@@ -19,6 +28,8 @@ module.exports = {
     node: true, // Enables Node.js global variables and Node.js scoping.
   },
   extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
@@ -35,5 +46,9 @@ module.exports = {
       },
     ],
     'react/prop-types': 0,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
 };

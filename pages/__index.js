@@ -1,9 +1,9 @@
-import React from 'react'
-import useSWR, { useSWRPages } from 'swr'
+import React from 'react';
+import useSWR, { useSWRPages } from 'swr';
 
-import fetcher from './../lib/fetcher'
-import PokemonShort from './../components/pokemonShort'
-import MainLayout from './../layouts/main'
+import fetcher from '../lib/fetcher';
+import PokemonShort from '../components/pokemonShort';
+import MainLayout from '../layouts/main';
 
 export default function Home() {
   const { pages, isLoadingMore, loadMore, isReachingEnd } = useSWRPages(

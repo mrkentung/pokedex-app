@@ -14,13 +14,26 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
     "next": "10.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-redux": "^7.2.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@next/bundle-analyzer": "^10.0.0",
+    "@types/fast-levenshtein": "^0.0.1",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-responsive": "^8.0.2",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-scroll": "^1.8.2",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "axios": "^0.21.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
@@ -29,11 +42,18 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^5.0.3",
+    "fast-levenshtein": "^3.0.0",
     "isomorphic-unfetch": "3.0.0",
+    "lodash-humps-ts": "^0.0.6",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
+    "react-icons": "^4.2.0",
+    "react-progressive-image-loading": "^3.0.3",
+    "react-spinners": "^0.10.6",
     "react-spring": "^8.0.27",
+    "react-waypoint": "^9.0.3",
     "swr": "0.2.0-beta.0",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^1.9.6",
+    "typescript": "^4.2.2"
   }
 }

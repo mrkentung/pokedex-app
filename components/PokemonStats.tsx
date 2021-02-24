@@ -1,7 +1,12 @@
 import React from 'react';
 
-const PokemonStats = ({ title, min, max }) => {
-  console.log(title, min, max);
+type Props = {
+  title: string;
+  min: number;
+  max: number;
+};
+
+const PokemonStats = ({ title, min, max }: Props) => {
   return (
     <div className="grid grid-cols-5 gap-2 md:gap-4 lg:gap-8 mt-2 md:mt-3">
       <span className="text-darkerGray font-medium">{title}</span>
@@ -21,4 +26,5 @@ const PokemonStats = ({ title, min, max }) => {
     </div>
   );
 };
+
 export default PokemonStats;
